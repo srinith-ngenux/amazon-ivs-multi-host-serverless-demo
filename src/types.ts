@@ -17,6 +17,14 @@ type RoomResponse = {
   token: Ivschat.Types.CreateChatTokenResponse;
 };
 
+type ChannelData = {
+  channelId: IVS.Types.ChannelArn;
+  playbackUrl: IVS.Types.PlaybackURL;
+  ingestEndpoint: IVS.Types.IngestEndpoint;
+  streamKey: IVS.Types.StreamKeyValue;
+  roomId: Ivschat.Types.RoomIdentifier;
+}
+
 type StageResponse = {
   id: IVSRealTime.Types.StageArn;
   token: IVSRealTime.Types.ParticipantToken;
@@ -44,4 +52,5 @@ export {
   RoomResponse,
   StageResponse,
   UserAttributes,
+  ChannelData
 };

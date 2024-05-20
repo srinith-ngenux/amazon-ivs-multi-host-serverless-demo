@@ -49,11 +49,11 @@ async function deleteGroupAndResources(groupId: string) {
   }
 
   // Delete channel
-  try {
-    await deleteChannel(channelId as IVS.Types.ChannelArn);
-  } catch (err) {
-    throw new Error(`Failed to delete channel: ${(err as Error).toString()}`);
-  }
+  // try {
+  //   await deleteChannel(channelId as IVS.Types.ChannelArn);
+  // } catch (err) {
+  //   throw new Error(`Failed to delete channel: ${(err as Error).toString()}`);
+  // }
 
   // Delete stage
   try {
@@ -63,11 +63,11 @@ async function deleteGroupAndResources(groupId: string) {
   }
 
   // Delete room
-  try {
-    await deleteRoom(roomId as Ivschat.Types.RoomIdentifier);
-  } catch (err) {
-    throw new Error(`Failed to delete room: ${(err as Error).toString()}`);
-  }
+  // try {
+  //   await deleteRoom(roomId as Ivschat.Types.RoomIdentifier);
+  // } catch (err) {
+  //   throw new Error(`Failed to delete room: ${(err as Error).toString()}`);
+  // }
 }
 
 // eslint-disable-next-line import/prefer-default-export

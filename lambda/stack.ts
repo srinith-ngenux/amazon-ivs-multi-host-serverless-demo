@@ -37,7 +37,7 @@ class AmazonIVSMultiHostStack extends Stack {
 
     const createFunction = new NodejsFunction(
       this,
-      "AmazonIVSMultiHostDemoCreateFunction",
+      "InviteToStage-CreateFunction",
       {
         entry: "lambda/createHandler.ts",
         handler: "createHandler",
@@ -50,7 +50,7 @@ class AmazonIVSMultiHostStack extends Stack {
 
     const deleteFunction = new NodejsFunction(
       this,
-      "AmazonIVSMultiHostDemoDeleteFunction",
+      "InviteToStage-DeleteFunction",
       {
         entry: "lambda/deleteHandler.ts",
         handler: "deleteHandler",
@@ -63,7 +63,7 @@ class AmazonIVSMultiHostStack extends Stack {
 
     const listFunction = new NodejsFunction(
       this,
-      "AmazonIVSMultiHostDemoListFunction",
+      "InviteToStage-ListFunction",
       {
         entry: "lambda/listHandler.ts",
         handler: "listHandler",
@@ -76,7 +76,7 @@ class AmazonIVSMultiHostStack extends Stack {
 
     const stageJoinFunction = new NodejsFunction(
       this,
-      "AmazonIVSMultiHostDemoJoinFunction",
+      "InviteToStage-JoinFunction",
       {
         entry: "lambda/stageJoinHandler.ts",
         handler: "stageJoinHandler",
@@ -89,7 +89,7 @@ class AmazonIVSMultiHostStack extends Stack {
 
     const stageDisconnectFunction = new NodejsFunction(
       this,
-      "AmazonIVSMultiHostDemoDisconnectFunction",
+      "InviteToStage-DisconnectFunction",
       {
         entry: "lambda/stageDisconnectHandler.ts",
         handler: "stageDisconnectHandler",
@@ -106,7 +106,7 @@ class AmazonIVSMultiHostStack extends Stack {
     stagesTable.grantReadData(stageJoinFunction);
     stagesTable.grantReadData(stageDisconnectFunction);
 
-    const api = new RestApi(this, "AmazonIVSMultiHostDemoApi", {
+    const api = new RestApi(this, "InviteToStage", {
       defaultCorsPreflightOptions: {
         allowOrigins: Cors.ALL_ORIGINS,
         allowMethods: ["POST", "DELETE"],

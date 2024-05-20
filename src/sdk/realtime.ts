@@ -12,9 +12,9 @@ const ivsRealtimeClient = new IVSRealTime({
 /**
  * IVS stages
  */
-async function createStage() {
+async function createStage(name: string) {
   const { stage } = await ivsRealtimeClient
-    .createStage({ tags: ResourceTags })
+    .createStage({ tags: ResourceTags, name })
     .promise();
   return stage as Required<IVSRealTime.Types.Stage>;
 }

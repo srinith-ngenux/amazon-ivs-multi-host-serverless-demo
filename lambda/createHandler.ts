@@ -28,6 +28,7 @@ async function createHandler(
       body.groupId || "",
       body.userId,
       body.attributes || {},
+      body.channelData || {}
     );
   } catch (err) {
     return createApiGwResponse(400, {
